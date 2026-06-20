@@ -1,5 +1,11 @@
+import Header from "@/components/header";
+
 const HomePage = () => {
-  return <main>HomePage</main>;
+  return (
+    <main className="min-h-dvh glass">
+      <Header />
+    </main>
+  );
 };
 
 export default HomePage;
