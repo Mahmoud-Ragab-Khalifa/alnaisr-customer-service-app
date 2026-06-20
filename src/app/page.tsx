@@ -1,9 +1,9 @@
-import Header from "@/components/header";
+import LoginForm from "./login/_components/LoginForm";
 
 const HomePage = () => {
   return (
-    <main className="min-h-dvh glass">
-      <Header />
+    <main className="min-h-[calc(100dvh-66px)] glass flex items-center justify-center">
+      <LoginForm />
     </main>
   );
 };

@@ -1,5 +1,5 @@
 const ClientsPage = () => {
-  return <main>ClientsPage</main>;
+  return <main>العملاء</main>;
 };
 
 export default ClientsPage;
