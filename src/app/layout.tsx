@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Cairo } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
+import ReactToastProvider from "@/providers/ReactToastProvider";
 
 const cairo = Cairo({
   subsets: ["arabic"],
@@ -20,9 +21,11 @@ export default function RootLayout({
   return (
     <html lang="en" dir="rtl" className={cairo.className}>
       <body>
-        <Header />
+        <ReactToastProvider>
+          <Header />
 
-        {children}
+          {children}
+        </ReactToastProvider>
       </body>
     </html>
   );

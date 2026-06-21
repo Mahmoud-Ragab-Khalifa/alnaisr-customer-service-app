@@ -1,3 +1,5 @@
+"use server";
+
 import { createSupabaseServerClient } from "@/lib/supabase/server-client";
 import { loginSchema } from "@/lib/validations/auth";
 
