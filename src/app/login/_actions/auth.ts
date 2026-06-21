@@ -25,7 +25,7 @@ export const login = async (prevState: unknown, formData: FormData) => {
     if (error) {
       return {
         status: error.status,
-        message: error.message,
+        message: "البريد الإلكتروني أو كلمة المرور غير صحيحة",
       };
     }
 
@@ -38,7 +38,7 @@ export const login = async (prevState: unknown, formData: FormData) => {
 
     return {
       status: 500,
-      message: "Unexpected Error Check Your Connection",
+      message: "خطأ غير متوقع، تحقق من اتصالك",
     };
   }
 };
