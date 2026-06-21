@@ -36,9 +36,8 @@ const AddClientForm = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-4">
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
           <span>التاريخ</span>
-          <span>اليلوم</span>
           <span>التوقيت</span>
           <span>بلد التقديم</span>
         </div>
