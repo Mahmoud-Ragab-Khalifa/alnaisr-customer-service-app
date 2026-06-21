@@ -4,13 +4,26 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { countries, dates, times } from "@/constants/addClient";
+
 const AddClientForm = () => {
   const pending = false;
 
   return (
     <div className="p-4 md:p-0 w-full max-w-4xl">
-      <form action="" className="space-y-10 glass-strong rounded-lg p-6 md:p-8">
-        <h1 className="text-center md:text-xl font-bold italic glow-text mb-10 md:mb-15">
+      <form
+        action=""
+        className="space-y-5 md:space-y-10 glass-strong rounded-lg p-6 md:p-8"
+      >
+        <h1 className="text-center md:text-xl font-bold italic glow-text mb-10 md:mb-12">
           يمكنك اضافة عميلك الجديد من هنا
         </h1>
 
@@ -37,14 +50,55 @@ const AddClientForm = () => {
         </div>
 
         <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
-          <span>التاريخ</span>
-          <span>التوقيت</span>
-          <span>بلد التقديم</span>
+          <Select dir="rtl">
+            <SelectTrigger className="w-full">
+              <SelectValue placeholder="التاريخ" />
+            </SelectTrigger>
+            <SelectContent position="popper">
+              <SelectGroup>
+                {dates.map((date) => (
+                  <SelectItem key={date.value} value={date.value}>
+                    {date.label}
+                  </SelectItem>
+                ))}
+              </SelectGroup>
+            </SelectContent>
+          </Select>
+
+          <Select dir="rtl">
+            <SelectTrigger className="w-full">
+              <SelectValue placeholder="التوقيت" />
+            </SelectTrigger>
+            <SelectContent position="popper">
+              <SelectGroup>
+                {times.map((date) => (
+                  <SelectItem key={date.value} value={date.value}>
+                    {date.label}
+                  </SelectItem>
+                ))}
+              </SelectGroup>
+            </SelectContent>
+          </Select>
+
+          <Select dir="rtl">
+            <SelectTrigger className="w-full">
+              <SelectValue placeholder="بلد التقديم" />
+            </SelectTrigger>
+            <SelectContent position="popper">
+              <SelectGroup>
+                {countries.map((date) => (
+                  <SelectItem key={date.value} value={date.value}>
+                    {date.label}
+                  </SelectItem>
+                ))}
+              </SelectGroup>
+            </SelectContent>
+          </Select>
         </div>
 
         <Button
           type="submit"
-          className="w-full mt-4"
+          className="w-full"
           variant={"default"}
           size={"lg"}
         >
