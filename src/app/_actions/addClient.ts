@@ -40,6 +40,7 @@ export const addClient = async (prevState: unknown, formData: FormData) => {
       }),
       appointment_time: result.data.time,
       employee_id: user.id,
+      employee_email: user.email,
     });
 
     if (error) {

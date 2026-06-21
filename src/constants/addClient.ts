@@ -10,50 +10,50 @@ export const dates = Array.from({ length: 11 }, (_, index) => {
 
 export const times = [
   {
-    value: "09:00",
+    value: "9:00 AM",
     label: "9:00 AM",
   },
   {
-    value: "10:00",
+    value: "10:00 AM",
     label: "10:00 AM",
   },
   {
-    value: "11:00",
+    value: "11:00 AM",
     label: "11:00 AM",
   },
   {
-    value: "12:00",
+    value: "12:00 PM",
     label: "12:00 PM",
   },
   {
-    value: "13:00",
+    value: "1:00 PM",
     label: "1:00 PM",
   },
   {
-    value: "14:00",
+    value: "2:00 PM",
     label: "2:00 PM",
   },
   {
-    value: "15:00",
+    value: "3:00 PM",
     label: "3:00 PM",
   },
 ];
 
 export const countries = [
   {
-    value: "belgium",
+    value: "بلجيكا",
     label: "بلجيكا",
   },
   {
-    value: "slovenia",
+    value: "سلوفينيا",
     label: "سلوفينيا",
   },
   {
-    value: "austria",
+    value: "النمسا",
     label: "النمسا",
   },
   {
-    value: "italy",
+    value: "إيطاليا",
     label: "إيطاليا",
   },
 ];
