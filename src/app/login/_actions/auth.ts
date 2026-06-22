@@ -17,7 +17,7 @@ export const login = async (prevState: unknown, formData: FormData) => {
   try {
     const supabase = await createSupabaseServerClient();
 
-    const { error } = await supabase.auth.signInWithPassword({
+    const { data, error } = await supabase.auth.signInWithPassword({
       email: result.data.email,
       password: result.data.password,
     });
@@ -27,6 +27,14 @@ export const login = async (prevState: unknown, formData: FormData) => {
         status: error.status,
         message: "البريد الإلكتروني أو كلمة المرور غير صحيحة",
       };
+    }
+
+    if (data.user && !error) {
+      await supabase.from("profiles").insert({
+        id: data.user.id,
+        full_name: data.user.email?.slice(0, data.user.email?.indexOf("@")),
+        role: data.user.email === "admerna@admin.org" ? "admin" : "employee",
+      });
     }
 
     return {
